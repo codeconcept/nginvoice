@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ProspectService } from '../prospect.service';
+
 @Component({
   selector: 'app-prospect-list',
   templateUrl: './prospect-list.component.html',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProspectListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private prospectService: ProspectService) { }
 
   ngOnInit() {
+    this.prospectService.getProspects().subscribe(
+      prospects => {
+        console.log(prospects)
+      },
+      error => {
+        console.error(error)
+      }
+    )
   }
 
 }
