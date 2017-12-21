@@ -1,0 +1,54 @@
+{
+    "estimates": [
+        {
+            "id": 1,
+            "title": "Phantom",
+            "category": "PC gamer entrée de gamme",
+            "prospect": {
+                "firstname": "Bender",
+                "lastname": "Rogriguez"
+            },
+            "hardware": {
+                "CPU": "AMD Athlon X4 860K",
+                "GPU": "AMD Radeon R7 370",
+                "RAM": "8 Go DDR3",
+                "OS": "Aucun OS",
+                "price": "519.95"
+            }
+        },
+        {
+            "id": 2,
+            "title": "Razorback",
+            "category": "PC gamer moyenne gamme",
+            "prospect": {
+                "firstname": "Leela",
+                "lastname": "Turanga"
+            },
+            "hardware": {
+                "CPU": "Processeur AMD Ryzen 5 1600",
+                "GPU": "NVIDIA GeForce GTX 1060",
+                "RAM": "16 Go DDR4",
+                "OS": "Windows 10",
+                "price": "1099.99"
+            }
+        }
+    ],
+    "sales": [
+        {
+            "id": 3,
+            "title": "Juggernaut II",
+            "category": "PC gamer haut de gamme",
+            "customer": {
+                "firstname": "Dr",
+                "lastname": "Zoidberg"
+            },
+            "hardware": {
+                "CPU": "Processeur Intel Core i7 7700K",
+                "GPU": "NVIDIA GeForce GTX 1080 Ti",
+                "RAM": "16 Go DDR4",
+                "OS": "Windows 10",
+                "price": "1999.99"
+            }
+        }
+    ]
+}
