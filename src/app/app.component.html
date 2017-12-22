@@ -3,7 +3,7 @@
 </div>
 <hr>
 <div class="side-menu">
-  <a routerLink="/estimates">devis</a>
+  <a [routerLink]="[{ outlets: { primary: 'estimates', details: null } }]">devis</a>
   <a>factures</a>
 </div>
 
