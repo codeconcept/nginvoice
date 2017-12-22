@@ -1,3 +1,3 @@
-<p>
-  prospect-list works!
-</p>
+<div *ngFor="let estimate of estimates">
+  {{estimate.prospect.firstname}} {{estimate.prospect.lastname}} {{estimate.title}} ({{estimate.category}})
+</div>

@@ -8,13 +8,15 @@ import { ProspectService } from '../prospect.service';
   styleUrls: ['./prospect-list.component.css']
 })
 export class ProspectListComponent implements OnInit {
+  estimates;
 
   constructor(private prospectService: ProspectService) { }
 
   ngOnInit() {
-    this.prospectService.getProspects().subscribe(
-      prospects => {
-        console.log(prospects)
+    this.prospectService.getEstimates().subscribe(
+      data => {
+        console.log(data)
+        this.estimates = data;
       },
       error => {
         console.error(error)

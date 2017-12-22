@@ -8,7 +8,7 @@ export class ProspectService {
 
     constructor(private http: HttpClient) {}
 
-    getProspects() {
+    getEstimates() {
         return this.http.get(`${this.url}/estimates`)
     }
 }
