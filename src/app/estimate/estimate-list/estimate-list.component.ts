@@ -8,6 +8,7 @@ import { EstimateService } from '../estimate.service';
 })
 export class EstimateListComponent implements OnInit {
   estimates;
+  title;
 
   constructor(private estimateService : EstimateService) { }
 
@@ -16,6 +17,8 @@ export class EstimateListComponent implements OnInit {
       data => {
         console.log(data);
         this.estimates = data;
+        const nbOfEstimates = (data as any).length;
+        this.title = `${nbOfEstimates} devis`;
       },
       error => {
         console.error(error)

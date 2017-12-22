@@ -1,5 +1,6 @@
-<div *ngFor="let estimate of estimates">
-    <a [routerLink]="['',{ outlets: { details: ['estimate-details', estimate.id]} }]">
+<h3>{{title}}</h3>
+<div *ngFor="let estimate of estimates" class="middle-block">
+    <a [routerLink]="['',{ outlets: { details: ['estimate-details', estimate.id]} }]" routerLinkActive="active">
         {{estimate.prospect.firstname}} {{estimate.prospect.lastname}} {{estimate.title}} ({{estimate.category}})
     </a>
 </div>
