@@ -31,6 +31,38 @@
                 "OS": "Windows 10",
                 "price": "1099.99"
             }
+        },
+        {
+            "id": 4,
+            "title": "Level One X par Canard PC ",
+            "category": "PC gamer entrée de gamme",
+            "prospect": {
+                "firstname": "Philip",
+                "lastname": "Fry"
+            },
+            "hardware": {
+                "CPU": "Processeur AMD Ryzen 3 1200",
+                "GPU": "AMD Radeon RX 560",
+                "RAM": "8 Go DDR4",
+                "OS": "Windows 10",
+                "price": "579.95"
+            }
+        },
+        {
+            "id": 5,
+            "title": "Manticore",
+            "category": "PC gamer haut gamme",
+            "prospect": {
+                "firstname": "Zapp",
+                "lastname": "Brannigan"
+            },
+            "hardware": {
+                "CPU": "Processeur Intel Core i9 7900X",
+                "GPU": "2-SLI Titan XP",
+                "RAM": "64 Go DDR4",
+                "OS": "Windows 10",
+                "price": "6999.95"
+            }
         }
     ],
     "sales": [

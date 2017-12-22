@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EstimateService } from '../estimate.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-estimate-details',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estimate-details.component.css']
 })
 export class EstimateDetailsComponent implements OnInit {
+  estimate;
 
-  constructor() { }
+  constructor(private estimateService : EstimateService, private activatedRoute: ActivatedRoute) { }
+
 
   ngOnInit() {
+    const id = this.activatedRoute.paramMap.subscribe(params => {
+      const id = params.get('id');
+      console.log(id);
+      this.estimateService.getEstimateById(id).subscribe(estimate => {
+        this.estimate = estimate;
+      });
+    })
   }
+
 
 }

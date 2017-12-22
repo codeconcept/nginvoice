@@ -1,3 +1,9 @@
-<p>
-  estimate-details works!
-</p>
+<div *ngIf="estimate">
+  <h3>{{estimate.title}}</h3>
+  <div>
+    prospect : {{estimate.prospect.lastname}} {{estimate.prospect.firstname}} <br>
+    article : {{estimate.title}} <br>
+    détails : {{estimate.category}} <br>
+    
+  </div>
+</div>

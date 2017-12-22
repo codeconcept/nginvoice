@@ -13,7 +13,7 @@ export class EstimateService {
   }
 
   getEstimateById(id) {
-    
+    return this.http.get(`${this.url}/estimates/${id}`);
   }
 
 }
