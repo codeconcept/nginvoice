@@ -8,7 +8,7 @@ export class EstimateDetailsResolve implements Resolve<any> {
     constructor(private estimateService: EstimateService) {}
 
     resolve(route: ActivatedRouteSnapshot) {
-        console.log('resolve');
+        console.log('resolve with id ', route.params.id);
         // we simply return an observable
         return this.estimateService.getEstimateById(route.params.id);
     }
