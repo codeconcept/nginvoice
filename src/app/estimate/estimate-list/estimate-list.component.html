@@ -1,3 +1,6 @@
+<div *ngIf="isLoading" class="loader">
+    loading
+</div>
 <h3>{{title}}</h3>
 <div *ngFor="let estimate of estimates" class="middle-block">
     <a [routerLink]="['',{ outlets: { details: ['estimate-details', estimate.id]} }]" routerLinkActive="active">

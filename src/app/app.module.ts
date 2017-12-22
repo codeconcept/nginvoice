@@ -27,7 +27,7 @@ const ROUTES = [
     PageNotFoundComponent
   ],
   imports: [
-    RouterModule.forRoot(ROUTES, { enableTracing: true }),
+    RouterModule.forRoot(ROUTES, { enableTracing: false }),
     BrowserModule,
     // ProspectModule,
     EstimateModule,

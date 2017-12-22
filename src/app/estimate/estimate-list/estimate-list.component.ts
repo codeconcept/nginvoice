@@ -9,16 +9,19 @@ import { EstimateService } from '../estimate.service';
 export class EstimateListComponent implements OnInit {
   estimates;
   title;
+  isLoading = false;
 
   constructor(private estimateService : EstimateService) { }
 
   ngOnInit() {
+    this.isLoading = true;
     this.estimateService.getEstimate().subscribe(
       data => {
         console.log(data);
         this.estimates = data;
         const nbOfEstimates = (data as any).length;
         this.title = `${nbOfEstimates} devis`;
+        this.isLoading = false;
       },
       error => {
         console.error(error)
