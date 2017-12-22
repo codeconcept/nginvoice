@@ -15,7 +15,7 @@ export class EstimateListComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
-    this.estimateService.getEstimate().subscribe(
+    this.estimateService.getEstimates().subscribe(
       data => {
         console.log(data);
         this.estimates = data;

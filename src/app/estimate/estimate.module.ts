@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { EstimateListComponent } from './estimate-list/estimate-list.component';
 import { EstimateDetailsComponent } from './estimate-details/estimate-details.component';
 import { EstimateService } from './estimate.service';
+import { EstimateDetailsResolve } from './estimate-details/estimate-details.resolve';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { EstimateService } from './estimate.service';
     RouterModule
   ],
   declarations: [EstimateListComponent, EstimateDetailsComponent],
-  providers: [EstimateService]
+  providers: [EstimateService, EstimateDetailsResolve]
 })
 export class EstimateModule { }

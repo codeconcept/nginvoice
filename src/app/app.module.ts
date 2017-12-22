@@ -11,12 +11,27 @@ import { EstimateDetailsComponent } from './estimate/estimate-details/estimate-d
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EstimateDetailsResolve } from './estimate/estimate-details/estimate-details.resolve';
 
 const ROUTES = [
-  { path: '', component: HomeComponent },
-  { path: 'estimates', component: EstimateListComponent },
-  { path: 'estimate-details/:id', component: EstimateDetailsComponent, outlet: 'details'},
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'estimates',
+    component: EstimateListComponent
+  },
+  {
+    path: 'estimate-details/:id',
+    component: EstimateDetailsComponent,
+    outlet: 'details',
+    resolve: { estimate: EstimateDetailsResolve }
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
 ];
 
 

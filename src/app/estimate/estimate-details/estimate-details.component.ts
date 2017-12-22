@@ -17,19 +17,10 @@ export class EstimateDetailsComponent implements OnInit {
 
   constructor(private estimateService: EstimateService, private activatedRoute: ActivatedRoute) { }
 
-
   ngOnInit() {
-    const paramMap$ = this.activatedRoute.paramMap;
-
-    paramMap$
-      .map(paramMap => paramMap.get('id'))
-      .do(data => console.log('before switchMap', data))
-      .switchMap(id => this.estimateService.getEstimateById(id))
-      .do(data => console.log('after switchMap', data))
-      .subscribe(estimate => {
-        this.estimate = estimate;
-      })
+    this.estimate = this.activatedRoute.snapshot.data['estimate'];
+    console.log('data', this.activatedRoute.data);
+    console.log('this.estimate', this.estimate);
   }
-
 
 }
