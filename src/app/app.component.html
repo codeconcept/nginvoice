@@ -6,6 +6,11 @@
   <a [routerLink]="[{ outlets: { primary: 'estimates', details: null } }]">devis</a>
   <a>factures</a>
 </div>
+<div>
+  <a routerLink="/special" *ngIf="authService.authenticated" routerLinkActive="active">Devis privés</a> &nbsp; 
+  <a *ngIf="!authService.authenticated" (click)="authService.login()">se connecter</a> &nbsp;
+  <a (click)="authService.logout()" *ngIf="authService.authenticated">se déconnecter</a>
+</div>
 
 <div class="middle-block">
   <router-outlet></router-outlet>
